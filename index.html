@@ -356,6 +356,10 @@
         white-space: nowrap;
       }
 
+      .contact-label {
+        display: inline;
+      }
+
       /* Iconos minimalistas */
       .contact-item::before {
         content: '';
@@ -488,6 +492,29 @@
         }
       }
 
+      @media (max-width: 483px) {
+        .contact-item {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          gap: 2px;
+          margin: 15px 0;
+          white-space: normal;
+        }
+        
+        .contact-label {
+          display: block;
+          font-weight: 700;
+          margin-bottom: 2px;
+        }
+        
+        .contact-item::before {
+          margin-right: 0;
+          margin-bottom: 6px;
+        }
+      }
+
       @media (max-width: 600px) {
         h1 {
           font-size: 2.2rem;
@@ -534,10 +561,10 @@
       <section>
         <h2>Contact</h2>
         <div class="contact">
-          <span class="contact-item">Email: <a href="mailto:tomasmgoyenecheap@gmail.com">tomasmgoyenecheap@gmail.com</a></span>
-          <span class="contact-item">Phone: +54 351 3789114</span>
-          <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/tomas-aparicio/" target="_blank">tomas-aparicio</a></span>
-          <span class="contact-item">GitHub: <a href="https://github.com/Tomilomi" target="_blank">Tomilomi</a></span>
+          <span class="contact-item"><span class="contact-label">Email:</span> <a href="mailto:tomasmgoyenecheap@gmail.com">tomasmgoyenecheap@gmail.com</a></span>
+          <span class="contact-item"><span class="contact-label">Phone:</span> +54 351 3789114</span>
+          <span class="contact-item"><span class="contact-label">LinkedIn:</span> <a href="https://www.linkedin.com/in/tomas-aparicio/" target="_blank">tomas-aparicio</a></span>
+          <span class="contact-item"><span class="contact-label">GitHub:</span> <a href="https://github.com/Tomilomi" target="_blank">Tomilomi</a></span>
         </div>
       </section>
 
