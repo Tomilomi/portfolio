@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tomas Aparicio | CV</title>
+    <style>
+      :root {
+        --bg: #1a1612;
+        --panel: #3d342b;
+        --accent: #d4a373;
+        --text: #f5e6d3;
+        --muted: #c9b89a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Courier New", monospace;
+        color: #f5e6d3;
+        background-color: #e8dcc8;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='5' /%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' fill='%23e8dcc8'/%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.18'/%3E%3C/svg%3E");
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+        padding: 60px 24px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      h1 {
+        font-family: "Courier New", monospace;
+        font-size: 3.5rem;
+        font-weight: 700;
+        letter-spacing: 3px;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        background: #3d342b;
+        color: #e8dcc8;
+        padding: 15px 25px;
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+        transform: rotate(-1deg);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+      }
+
+      .subtitle {
+        color: #e8dcc8;
+        font-size: 1.3rem;
+        font-weight: 600;
+        background: #3d342b;
+        padding: 8px 18px;
+        display: inline-block;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        transform: rotate(0.5deg);
+        font-family: "Courier New", monospace;
+        letter-spacing: 1px;
+        margin-top: 10px;
+      }
+
+      section {
+        background: var(--panel);
+        border-radius: 14px;
+        padding: 28px 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.03);
+        position: relative;
+        border: 1px solid rgba(213, 184, 147, 0.1);
+      }
+
+      section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, var(--accent) 1px, transparent 1px) 0 0, linear-gradient(to bottom, var(--accent) 1px, transparent 1px) 0 0;
+        background-size: 16px 16px;
+        opacity: 0.08;
+        border-radius: 14px;
+        pointer-events: none;
+      }
+
+      h2 {
+        font-family: "Courier New", monospace;
+        font-size: 1.9rem;
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 18px;
+        color: var(--text);
+        position: relative;
+        padding-bottom: 8px;
+        border-bottom: 3px solid var(--text);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      p {
+        margin: 0 0 12px;
+      }
+
+      ul {
+        padding-left: 18px;
+      }
+
+      li {
+        margin-bottom: 8px;
+        position: relative;
+      }
+
+      li::marker {
+        content: "▸ ";
+        color: var(--accent);
+      }
+
+      .contact {
+        text-align: center;
+        font-size: 1.05rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        line-height: 2.2;
+      }
+      
+      .contact-item {
+        display: inline-block;
+        margin: 8px 12px;
+        white-space: nowrap;
+      }
+
+      .contact a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      .contact a:hover {
+        text-decoration: underline;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: var(--muted);
+        text-decoration: underline;
+      }
+
+      .taglist {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+      }
+
+      .tag {
+        background: var(--accent);
+        color: #1a1612;
+        padding: 8px 14px;
+        font-size: 1rem;
+        font-weight: 600;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        font-family: "Courier New", monospace;
+        letter-spacing: 0.5px;
+      }
+
+      .tag:nth-child(odd) { transform: rotate(-1deg); }
+      .tag:nth-child(even) { transform: rotate(1deg); }
+
+      .tag:hover {
+        transform: scale(1.05);
+        box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+      }
+
+      @media (max-width: 768px) {
+        .contact-item {
+          display: block;
+          margin: 10px 0;
+        }
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 2.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Tomas Aparicio</h1>
+        <div class="subtitle">
+          Systems Engineering Student — Córdoba, Argentina
+        </div>
+      </header>
+
+      <section>
+        <h2>Summary</h2>
+        <p>
+          I am an advanced Engineering student. My academic background helps me
+          adapt quickly to new technologies, work environments, and challenges.
+        </p>
+        <p>
+          I enjoy solving problems, improving systems, and learning new things.
+          Through personal projects, I've been exploring different areas of
+          software development to expand my knowledge and build practical
+          skills.
+        </p>
+        <p>
+          I am currently looking for job opportunities where I can continue
+          learning and growing as a professional.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <div class="contact">
+          <span class="contact-item">Email: <a href="mailto:tomasmgoyenecheap@gmail.com">tomasmgoyenecheap@gmail.com</a></span>
+          <span class="contact-item">Phone: +54 351 3789114</span>
+          <span class="contact-item">LinkedIn: <a href="https://www.linkedin.com/in/tomas-aparicio/" target="_blank">tomas-aparicio</a></span>
+          <span class="contact-item">GitHub: <a href="https://github.com/Tomilomi" target="_blank">Tomilomi</a></span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Toolset</h2>
+
+        <p><strong>Programming Languages</strong></p>
+        <div class="taglist">
+          <span class="tag">JavaScript</span>
+          <span class="tag">Java</span>
+          <span class="tag">C# (learning)</span>
+        </div>
+
+        <p><strong>Databases</strong></p>
+        <div class="taglist">
+          <span class="tag">PostgreSQL</span>
+          <span class="tag">SQLite</span>
+          <span class="tag">SQL Server</span>
+          <span class="tag">Redis</span>
+        </div>
+
+        <p><strong>Stacks & Technologies</strong></p>
+        <div class="taglist">
+          <span class="tag">Spring</span>
+          <span class="tag">Maven</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag">Sequelize</span>
+          <span class="tag">React</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">Bootstrap</span>
+          <span class="tag">Tailwind</span>
+        </div>
+
+        <p><strong>Other Skills</strong></p>
+        <div class="taglist">
+          <span class="tag">Linux</span>
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">GitLab</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Bash</span>
+          <span class="tag">Assembly</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+
+        <p><strong>Real Time Chat</strong></p>
+        <ul>
+          <li>Full-stack real-time chat application with retro UI.</li>
+          <li>
+            Backend: Node.js, Express, Sequelize, SQL Server, JWT auth, Multer.
+          </li>
+          <li>Frontend: React, Axios, TailwindCSS, NES.css.</li>
+          <li>
+            Architecture: services, repositories, models, routes, middlewares.
+          </li>
+        </ul>
+        <p>
+          <a href="https://github.com/Tomilomi/chat-backend">Backend Repo</a> |
+          <a href="https://github.com/Tomilomi/chat-react-front">Frontend Repo</a>
+        </p>
+
+        <br />
+
+        <p><strong>Daily Cats</strong></p>
+        <ul>
+          <li>Displays a new cat GIF every day.</li>
+          <li>Node.js, Express, CORS.</li>
+          <li>Focused on full-stack integration and fun UX.</li>
+        </ul>
+        <p><a href="https://github.com/Tomilomi/daily-cat">Repository</a></p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <p>National Technological University (UTN)</p>
+        <p>Systems Engineering — 4th Year</p>
+      </section>
+
+      <section>
+        <h2>Languages</h2>
+        <ul>
+          <li>Spanish — Native</li>
+          <li>English — Intermediate</li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
