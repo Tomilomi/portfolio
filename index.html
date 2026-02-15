@@ -11,12 +11,11 @@
     <title>Tomas Aparicio | CV</title>
   </head>
   <body>
-
     <div id="sakana-root"></div>
 
     <div class="controls">
       <button class="theme-toggle" onclick="toggleTheme()">DARK MODE</button>
-      <button class="pdf-download" onclick="downloadPDF()">DOWNLOAD PDF</button>
+      <a class="pdf-download" download href="assets/cv.pdf">DOWNLOAD PDF</a>
     </div>
 
     <div class="container">
@@ -112,7 +111,6 @@
           <span class="tag">Docker</span>
           <span class="tag">Bash</span>
           <span class="tag">Assembly</span>
-          
         </div>
       </section>
 
@@ -162,8 +160,8 @@
         </ul>
       </section>
     </div>
-    
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sakana-widget@2.7.0/lib/sakana.min.js"></script>
     <script src="script.js"></script>
   </body>
