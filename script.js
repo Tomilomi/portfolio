@@ -26,23 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-// PDF download functionality
-function downloadPDF() {
-    // Hide controls before printing
-    const controls = document.querySelector(".controls");
-    const originalDisplay = controls.style.display;
-    controls.style.display = "none";
-
-    // Trigger print dialog
-    window.print();
-
-    // Restore controls after print dialog closes
-    setTimeout(() => {
-        controls.style.display = originalDisplay;
-    }, 100);
-}
-
-// Widget setup
 
 window.addEventListener("DOMContentLoaded", () => {
   const char = SakanaWidget.getCharacter("takina");
@@ -57,6 +40,7 @@ window.addEventListener("DOMContentLoaded", () => {
     controls: false
   }).mount("#sakana-root");
 });
+
 
 
 
